@@ -4,165 +4,254 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ThreatScope | AI-Powered Phishing Detection</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', sans-serif;
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
 }
 
-body {
-    background: #0f172a;
-    color: #f1f5f9;
+body{
+background:#0f172a;
+color:#f1f5f9;
 }
 
-header {
-    padding: 20px 10%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header{
+padding:20px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: 800;
-    color: #22d3ee;
+.logo{
+font-size:24px;
+font-weight:800;
+color:#22d3ee;
 }
 
-nav a {
-    margin-left: 25px;
-    text-decoration: none;
-    color: #cbd5e1;
-    font-weight: 500;
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:#cbd5e1;
+font-weight:500;
 }
 
-.hero {
-    text-align: center;
-    padding: 100px 10%;
+.hero{
+text-align:center;
+padding:100px 10%;
 }
 
-.hero h1 {
-    font-size: 48px;
-    font-weight: 800;
-    margin-bottom: 20px;
+.hero h1{
+font-size:48px;
+font-weight:800;
+margin-bottom:20px;
 }
 
-.hero span {
-    color: #22d3ee;
+.hero span{
+color:#22d3ee;
 }
 
-.hero p {
-    font-size: 18px;
-    color: #94a3b8;
-    margin-bottom: 40px;
+.hero p{
+font-size:18px;
+color:#94a3b8;
+margin-bottom:40px;
 }
 
-.btn {
-    padding: 14px 28px;
-    background: linear-gradient(90deg, #06b6d4, #3b82f6);
-    border: none;
-    border-radius: 8px;
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
+.btn{
+padding:14px 28px;
+background:linear-gradient(90deg,#06b6d4,#3b82f6);
+border:none;
+border-radius:8px;
+color:white;
+text-decoration:none;
+font-weight:600;
+cursor:pointer;
 }
 
-.section {
-    padding: 80px 10%;
-    text-align: center;
+.section{
+padding:80px 10%;
+text-align:center;
 }
 
-.section h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
+.section h2{
+font-size:32px;
+margin-bottom:40px;
 }
 
-.features {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
 }
 
-.card {
-    background: #1e293b;
-    padding: 30px;
-    border-radius: 12px;
-    transition: 0.3s;
+.card{
+background:#1e293b;
+padding:30px;
+border-radius:12px;
+transition:0.3s;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+.card:hover{
+transform:translateY(-5px);
 }
 
-.card h3 {
-    margin-bottom: 15px;
-    color: #22d3ee;
+.card h3{
+margin-bottom:15px;
+color:#22d3ee;
 }
 
-footer {
-    text-align: center;
-    padding: 30px;
-    background: #0b1220;
-    color: #64748b;
+.scan-box{
+background:#1e293b;
+padding:30px;
+border-radius:12px;
+max-width:600px;
+margin:auto;
 }
+
+.scan-box input{
+width:100%;
+padding:12px;
+margin-top:15px;
+border:none;
+border-radius:8px;
+}
+
+.result{
+margin-top:20px;
+font-size:18px;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#0b1220;
+color:#64748b;
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-    <div class="logo">ThreatScope</div>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#features">Features</a>
-        <a href="#demo">Demo</a>
-    </nav>
+<div class="logo">ThreatScope</div>
+
+<nav>
+<a href="#about">About</a>
+<a href="#features">Features</a>
+<a href="#scanner">Scanner</a>
+</nav>
 </header>
 
 <section class="hero">
-    <h1>Real-Time <span>AI-Powered</span> Phishing Detection</h1>
-    <p>Detecting AI-generated scams, phishing emails, and malicious content across modern browsers.</p>
-    <a href="#" class="btn">Try Extension</a>
+
+<h1>Real-Time <span>AI-Powered</span> Phishing Detection</h1>
+
+<p>
+Detecting AI-generated scams, phishing emails, and malicious content across modern browsers.
+</p>
+
+<a href="#scanner" class="btn">Try Scanner</a>
+
 </section>
 
 <section id="about" class="section">
-    <h2>Why ThreatScope?</h2>
-    <p style="max-width:800px; margin:auto; color:#94a3b8;">
-        As artificial intelligence advances, phishing attacks are becoming more sophisticated and harder to detect.
-        ThreatScope analyzes content patterns, behavioral signals, and contextual intent to identify AI-driven fraud in real time.
-    </p>
+
+<h2>Why ThreatScope?</h2>
+
+<p style="max-width:800px;margin:auto;color:#94a3b8;">
+As artificial intelligence advances, phishing attacks are becoming more sophisticated and harder to detect.
+ThreatScope analyzes content patterns, behavioral signals, and contextual intent to identify AI-driven fraud in real time.
+</p>
+
 </section>
 
 <section id="features" class="section">
-    <h2>Core Features</h2>
-    <div class="features">
-        <div class="card">
-            <h3>AI Phishing Detection</h3>
-            <p>Analyzes tone, urgency patterns, and suspicious behavior signals.</p>
-        </div>
-        <div class="card">
-            <h3>Real-Time Browser Monitoring</h3>
-            <p>Instant alerts while browsing emails and websites.</p>
-        </div>
-        <div class="card">
-            <h3>Risk Scoring System</h3>
-            <p>Generates clear threat scores with structured explanations.</p>
-        </div>
-    </div>
+
+<h2>Core Features</h2>
+
+<div class="features">
+
+<div class="card">
+<h3>AI Phishing Detection</h3>
+<p>Analyzes tone, urgency patterns, and suspicious behavior signals.</p>
+</div>
+
+<div class="card">
+<h3>Real-Time Browser Monitoring</h3>
+<p>Instant alerts while browsing emails and websites.</p>
+</div>
+
+<div class="card">
+<h3>Risk Scoring System</h3>
+<p>Generates clear threat scores with structured explanations.</p>
+</div>
+
+</div>
 </section>
 
-<section id="demo" class="section">
-    <h2>Live Demonstration</h2>
-    <p style="color:#94a3b8;">Tested on Firefox and Microsoft Edge.</p>
-    <br>
-    <a href="#" class="btn">Watch Demo Video</a>
+
+<!-- Scanner Section Added -->
+
+<section id="scanner" class="section">
+
+<h2>Threat Scanner</h2>
+
+<div class="scan-box">
+
+<input id="urlInput" placeholder="Enter website URL to scan">
+
+<br><br>
+
+<button class="btn" onclick="scanURL()">Scan Website</button>
+
+<div class="result" id="result"></div>
+
+</div>
+
 </section>
+
 
 <footer>
-    © 2026 ThreatScope | Built for Modern Cybersecurity Awareness
+
+© 2026 ThreatScope | Built for Modern Cybersecurity Awareness
+
 </footer>
+
+
+<script>
+
+async function scanURL(){
+
+const url=document.getElementById("urlInput").value;
+
+if(!url){
+alert("Enter a URL");
+return;
+}
+
+const res=await fetch("/scan/website",{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify({url})
+});
+
+const data=await res.json();
+
+document.getElementById("result").innerHTML=
+"<b>Risk Score:</b> "+data.score+
+"<br><b>Verdict:</b> "+data.verdict;
+
+}
+
+</script>
 
 </body>
 </html>
